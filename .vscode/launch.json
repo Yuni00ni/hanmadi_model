@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Current File (GPU 최적화)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "CUDA_LAUNCH_BLOCKING": "1",
+                "OMP_NUM_THREADS": "8",
+                "PYTORCH_CUDA_ALLOC_CONF": "max_split_size_mb:512",
+                "PYTORCH_ENABLE_MPS_FALLBACK": "1"
+            },
+            "args": []
+        },
+        {
+            "name": "Jupyter: GPU 최적화 노트북",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "jupyter",
+            "args": [
+                "notebook",
+                "--allow-root",
+                "--ip=0.0.0.0",
+                "--no-browser"
+            ],
+            "console": "integratedTerminal",
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0",
+                "CUDA_LAUNCH_BLOCKING": "1",
+                "OMP_NUM_THREADS": "8",
+                "PYTORCH_CUDA_ALLOC_CONF": "max_split_size_mb:512",
+                "PYTORCH_ENABLE_MPS_FALLBACK": "1"
+            }
+        }
+    ]
+}

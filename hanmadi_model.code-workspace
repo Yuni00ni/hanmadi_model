@@ -1,0 +1,19 @@
+{
+    "folders": [
+        {
+            "name": "Hanmadi Model (GPU 최적화)",
+            "path": "."
+        }
+    ],
+    "settings": {
+        "python.defaultInterpreterPath": "python",
+        "jupyter.alwaysTrustNotebooks": true,
+        "jupyter.askForKernelRestart": false
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-python.python",
+            "ms-toolsai.jupyter"
+        ]
+    }
+}
